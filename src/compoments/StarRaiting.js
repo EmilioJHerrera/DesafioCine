@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import '../App.css'
+import StarFilter from './StarFilter';
 
 const StarRaiting = () => {
 
@@ -32,6 +33,7 @@ const StarRaiting = () => {
             </button>        
         );
       })}
+      <StarFilter rating={rating}/>
     </section>
   )
 }

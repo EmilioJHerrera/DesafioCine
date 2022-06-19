@@ -16,8 +16,8 @@ useEffect(()=>{
             const data = await respuesta.json()
             console.log('descubrir:',data)
             setData(data.results)
-            //crear un array con las primeras 7 peliculas para mostrar en el front.
-            setData7(data.results.slice(0,7))
+            //crear un array con las primeras 9 peliculas para mostrar en el front.
+            setData7(data.results.slice(0,9))
 
                         
         } catch (error) {
@@ -29,20 +29,26 @@ useEffect(()=>{
 },[])
 
   return (
-    <div><h2>DiscoverMovie</h2>      
+    <div className='container'>
+        
+        <h2>DiscoverMovie</h2>      
     
     <div className="grid-container">
            {data7.map((item,index) => {
                
                return(
-               <div>
+               <div className={`img${index+1}`}>
                    <img src={`https://image.tmdb.org/t/p/w500/${item.poster_path}`} 
                    alt='...'
-                   className={`img${index+1}`}
+                   style={ {width: '100%', height:'100%', } }
                    />
                 </div>
                 )})}
+    
+   
     </div>
+
+
     
     
     </div>

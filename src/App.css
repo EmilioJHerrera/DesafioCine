@@ -1,26 +1,66 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
+  
+}
+
+.container{
+  padding: 0 1rem;
+}
+.hero{
+  background-image: url("./assets/pulp.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+}
+
+body{
+  width: 100%;
+  height: 100%;
 }
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  grid-template-areas: "img1 img1 img2 img3 img4"
-                        "img1 img1 img5 img6 img7";
   
+  grid-template-columns: 35% 15% 15% 15% 15%;
+  grid-template-rows: repeat(2, 40%);
+  grid-column-gap: 8px;
+  grid-row-gap: 8px;
+
+  
+
+  
+  
+  border: 2px solid red; 
+  }
+ 
+ /* @media (max-width: 400px) {
+  .grid-container {
+    grid-template-columns: repeat(2, auto);
+    background-color: #000;
   }
   
-  .img1 { grid-area: 1 / 1 / 3 / 3;
-    border: 2px solid red; }
-  .img2 { grid-area: 1 / 3 / 2 / 4; }
-  .img3 { grid-area: 1 / 4 / 2 / 5; }
-  .img4 { grid-area: 1 / 5 / 2 / 6; }
-  .img5 { grid-area: 2 / 3 / 3 / 4; }
-  .img6 { grid-area: 2 / 4 / 3 / 5; }
-  .img7 { grid-area: 2 / 5 / 3 / 6; }
+ }  */
+
+.img1 { grid-area: 1 / 1 / 3 / 2;
+  padding-left: 7rem; 
+  padding-right: 1rem;
+ }
+.img2 { grid-area: 1 / 2 / 2 / 3; }
+.img3 { grid-area: 1 / 3 / 2 / 4; }
+.img4 { grid-area: 1 / 4 / 2 / 5; }
+.img5 { grid-area: 1 / 5 / 2 / 6; }
+.img6 { grid-area: 2 / 2 / 3 / 3; }
+.img7 { grid-area: 2 / 3 / 3 / 4; }
+.img8 { grid-area: 2 / 4 / 3 / 5; }
+.img9 { grid-area: 2 / 5 / 3 / 6; }
+
+  /* raiting component */
 
   button {
     background-color: transparent;
