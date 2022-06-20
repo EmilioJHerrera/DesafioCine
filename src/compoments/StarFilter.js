@@ -28,7 +28,8 @@ const StarFilter = ({rating}) => {
     useEffect(()=>{
         
         const filtrar = data.filter(item => {
-            if(item.vote_average >= (rating*2)){
+            // if(item.vote_average <= (rating*2)){
+             if((item.vote_average <= (rating*2)) && (item.vote_average >= (rating*2-2))){
                 
                  return item
                 
@@ -41,7 +42,7 @@ const StarFilter = ({rating}) => {
 
     return (
     <div>
-        
+        {rating!==0?<p>Valores entre {rating*2-2} y {rating*2}</p>:<p>Filtro off</p>}
         {(rating==0)&&data.map((item,index) => {
                const {id, title, poster_path, vote_average} = item;
                return(

@@ -37,7 +37,7 @@ sugerencia de diseño, pero tú decides.
 react-router-dom para manejo de la navegación
 
 
-++++++++++++++++++++++++++++++++   Info para adjunta creada por default por React   ++++++++++++++++++++++++++++++++++++++++
+# Instalación y documentación por default de React
 
 # Getting Started with Create React App
 
