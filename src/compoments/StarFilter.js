@@ -13,7 +13,7 @@ const StarFilter = ({rating}) => {
                 const url = `https://api.themoviedb.org/3/discover/movie?api_key=${api_key}&language=es-ES&sort_by=popularity.desc&include_adult=false&include_video=false&page=1`
                 const respuesta = await fetch(url)
                 const data = await respuesta.json()
-                console.log('descubrir:',data)
+                
                 setData(data.results)
                     
                             
@@ -29,13 +29,13 @@ const StarFilter = ({rating}) => {
         
         const filtrar = data.filter(item => {
             if(item.vote_average >= (rating*2)){
-                console.log('item',item.vote_average)
+                
                  return item
                 
             }
         })
 
-        console.log('filtrar',filtrar)
+        
         setFiltrado(filtrar)
     },[rating])
 

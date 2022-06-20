@@ -9,7 +9,7 @@ const DiscoverMovie = () => {
     const navigate = useNavigate()
 
     const api_key = '8832264ce5ed4ff5ee2710651fa5f704'
-    // https://image.tmdb.org/t/p/w500/
+
 
     const handleCLick = (id) =>{
         navigate(`/movieDetails/${id}`)
@@ -26,41 +26,36 @@ useEffect(()=>{
             //crear un array con las primeras 9 peliculas para mostrar en el front.
             setData7(data.results.slice(0,9))
 
-                        
         } catch (error) {
             console.log('error', error)
         }
-
     }
     descubrirPeliculas();
 },[])
 
   return (
     <section className='container'>
-        
-        <h2>DiscoverMovie</h2> 
-        <Link to={"/seeMore"} 
-        state = {{data: data}}>Ver mas</Link>
-    <div className="grid-container">
-           {data7.map((item,index) => {
-               const {id, title, poster_path,} = item;
-               return(
-                <div className={`img${index+1}`}
-                key={id}>
-                   <img src={`https://image.tmdb.org/t/p/w500/${poster_path}`} 
-                   alt={title}
-                   style={ {width: '100%', height:'100%', } }
-                //    onClick={<Link to={`/movieDetails/${id}`}></Link>}
-                onClick={()=>handleCLick(id)}
-                //    onClick={()=>{console.log('aquiiii')}}
-                   />
-                </div>
-                )})}
-    </div>
-
-
-    
-    
+        <div className='subheading_flex'>
+            <h2>Películas populares</h2> 
+            <Link to={"/seeMore"} 
+            state = {{data: data}}
+            style={{textDecoration:'none', color:'#8d8d8d'}}>
+            Ver todas</Link>
+        </div>
+        <div className="grid-container">
+            {data7.map((item,index) => {
+                const {id, title, poster_path,} = item;
+                return(
+                        <div className={`img${index+1}`}
+                            key={id}>
+                            <img src={`https://image.tmdb.org/t/p/w500/${poster_path}`} 
+                            alt={title}
+                            style={ {width: '100%', height:'100%', } }
+                            onClick={()=>handleCLick(id)}           
+                            />
+                        </div>
+                    )})}
+            </div>
     </section>
   )
 }

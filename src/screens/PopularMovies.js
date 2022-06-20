@@ -9,7 +9,7 @@ const PopularMovies = () => {
   return (
     <section>
       <SearchFecth palabra={search}/>
-        <h4>Popular Movies</h4>
+        
         
 
     </section>

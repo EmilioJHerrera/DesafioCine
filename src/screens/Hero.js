@@ -12,7 +12,7 @@ const Hero = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     navigate(`/popularMovies/${search}`);
-    console.log('search', search);
+  
   }
 
   return (

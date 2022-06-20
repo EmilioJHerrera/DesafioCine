@@ -15,7 +15,8 @@ const ImageCard = ({id, title, poster_path, vote_average}) => {
          
          <img src={`https://image.tmdb.org/t/p/w500/${poster_path}`} 
           alt={title}
-          style={ {width: '50%', height:'10%',} }
+          className='card_image'
+          
           onClick={()=>handleCLick(id)}
            />
           <p style={{ marginTop:'.5rem'}}>Raiting: {vote_average}</p>

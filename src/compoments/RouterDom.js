@@ -4,15 +4,13 @@ import React from 'react';
 import Landing from '../screens/Landing';
 import RaitingSearch from '../screens/RaitingSearch';
 import PopularMovies from '../screens/PopularMovies';
+import SeeMore from '../screens/SeeMore';
+import MoviesDetail from './MoviesDetail';
 
 import {
-    BrowserRouter as Router,
-    Link,
     Routes,
     Route
   } from "react-router-dom";
-import SeeMore from '../screens/SeeMore';
-import MoviesDetail from './MoviesDetail';
 
 export const RouterDom = () => {
   return (
@@ -24,9 +22,6 @@ export const RouterDom = () => {
       <Route path="/seeMore" element={<SeeMore data={true}/>}></Route>
       <Route path="/movieDetails/:id" element={<MoviesDetail/>}></Route>
     </Routes>
-
-
-
     </>
   )
 }

@@ -19,6 +19,7 @@ const StarRaiting = () => {
   return (
     <section>
         <h4>Star Raiting</h4>
+        <p>Utiliza el indicador de estrellas para filtrar por Raiting</p>
         {[...Array(5)].map((star,index) => {
             index+=1;        
         return ( 

@@ -5,7 +5,6 @@ import { useLocation } from 'react-router-dom';
 
 const SeeMore = () => {
     const location = useLocation();
-    // console.log(location);
     const data= location.state.data;
     
 
