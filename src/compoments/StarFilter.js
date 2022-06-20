@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react'
+import ImageCard from './ImageCard';
 
 const StarFilter = ({rating}) => {
     
@@ -42,28 +43,28 @@ const StarFilter = ({rating}) => {
     <div>
         
         {(rating==0)&&data.map((item,index) => {
-               
+               const {id, title, poster_path, vote_average} = item;
                return(
-               <div>
-                   <img src={`https://image.tmdb.org/t/p/w500/${item.poster_path}`} 
-                   alt='...'
-                   style={ {width: '10%', height:'10%', } }
-                   />
-                   <p>{item.vote_average}</p>
-                </div>
+                <ImageCard 
+                key={id}
+                id={id}
+                title={title} 
+                poster_path={poster_path} 
+                vote_average={vote_average}/>
+            
                 )})}
 
            {/* <h1>FILTRADO</h1> */}
            {(rating!=0)&&filtrado.map((item,index) => {
-               
+               const {id, title, poster_path, vote_average} = item;
                return(
-               <div>
-                   <img src={`https://image.tmdb.org/t/p/w500/${item.poster_path}`} 
-                   alt='...'
-                   style={ {width: '10%', height:'10%', } }
-                   />
-                    <p>{item.vote_average}</p>
-                </div>
+                <ImageCard 
+                key={id}
+                id={id}
+                title={title} 
+                poster_path={poster_path} 
+                vote_average={vote_average}/>
+            
                 )})}     
     </div>
   )
