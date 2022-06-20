@@ -1,3 +1,44 @@
+# Introducción
+
+Su sala de cine local tiene una gran necesidad de atraer una nueva audiencia.
+Para hacer esto, le piden que cree una aplicación web simple que permita a los usuarios
+descubrir nuevas películas y buscarlas.
+Dado que no tienen un servicio de back-end, la primera versión de la aplicación se creará
+utilizando la API pública: https://developers.themoviedb.org/3
+
+## Características
+
+### Descubrir
+Al abrir la aplicación web, los usuarios deberían poder ver una lista de películas sugeridas
+por la aplicación y ordenadas por popularidad.
+
+### Búsqueda
+En la vista de descubrimiento, agregue una barra de búsqueda en la parte superior para
+permitir a los usuarios consultar información sobre películas.
+
+### Filtrar por clasificación
+La calificación es un valor entre 0 y 10.
+Al seleccionar una estrella, también deben seleccionarse todas las estrellas de la izquierda.
+El rango de cada estrella es 2, por lo que, si se selecciona la primera estrella, sólo deberían
+aparecer películas con calificación 0-2. Si se selecciona la segunda estrella, sólo deberían
+aparecer películas con una calificación de 2 a 4, y así sucesivamente.
+Si la estrella en la que se hizo clic es la actualmente activa, deshabilite el filtro.
+
+### Vista de detalles
+Al hacer clic, se debe mostrar una vista detallada, mostrando más información sobre la
+película.
+
+## Diseño
+Una interfaz de usuario limpia y mínima servirá.
+(https://dribbble.com/shots/1682568-Flixus-Homepage-WIP/attachments/266476) una
+sugerencia de diseño, pero tú decides.
+
+# Info de dependencias
+react-router-dom para manejo de la navegación
+
+
+++++++++++++++++++++++++++++++++   Info para adjunta creada por default por React   ++++++++++++++++++++++++++++++++++++++++
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

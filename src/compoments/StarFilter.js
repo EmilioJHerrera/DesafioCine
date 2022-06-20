@@ -3,7 +3,7 @@ import ImageCard from './ImageCard';
 
 const StarFilter = ({rating}) => {
     
-    const api_key = '8832264ce5ed4ff5ee2710651fa5f704'
+    const api_key = process.env.REACT_APP_MOVIEDB_API_KEY;
     const [data, setData] = useState([]);
     const [filtrado, setFiltrado] = useState([]);
     

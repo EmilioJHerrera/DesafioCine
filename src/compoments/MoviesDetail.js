@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import Spinner from './Spinner';
-
+import '../App.css'
 
 const MoviesDetail = () => {
 
     let { id } = useParams();
-    const api_key = '8832264ce5ed4ff5ee2710651fa5f704'
+    const api_key = process.env.REACT_APP_MOVIEDB_API_KEY;
     const [respuestaID, setRespuestaID] = useState([]);
     const [loading, setLoading] = useState(true);
    
@@ -37,7 +37,9 @@ const MoviesDetail = () => {
     <>
     {loading ? <Spinner/>:
     <div 
-    style={{ padding:'1rem 3rem', display:'flex',}}>
+    className='details-container'>
+    {/* style={{ padding:'1rem 3rem', display:'flex',}}
+    > */}
 
         <div>
          <img src={`https://image.tmdb.org/t/p/w500/${respuestaID.poster_path}`} 

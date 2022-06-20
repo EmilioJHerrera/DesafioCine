@@ -11,7 +11,7 @@ const [loading, setLoading] = useState(true);
  let busqueda= palabra;
 
 
-const api_key = '8832264ce5ed4ff5ee2710651fa5f704'
+const api_key = process.env.REACT_APP_MOVIEDB_API_KEY;
 
 
 useEffect(()=>{
@@ -40,7 +40,7 @@ useEffect(()=>{
     <>
     {loading ? <Spinner/> :
     <div>
-      <p>Aquí los resultados de tu búsqueda</p>
+      <p className='info'>Aquí los resultados de tu búsqueda</p>
  {respuesta.map(movie => {
    const {id, title, poster_path, vote_average} = movie
    return(
@@ -56,6 +56,7 @@ useEffect(()=>{
   )}
 
     </div>}
+    {respuesta.length===0 && <p>No se encontraron resultados, vuelve atrás e intenta otra búsqueda</p>}
     </>
   )
 }

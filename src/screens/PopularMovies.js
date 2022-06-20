@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 const PopularMovies = () => {
 
   let { search } = useParams();
-  console.log('busqueda popular', search)
+  // console.log('busqueda popular', search)
   return (
     <section>
       <SearchFecth palabra={search}/>

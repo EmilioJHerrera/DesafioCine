@@ -11,6 +11,7 @@ import {
     Routes,
     Route
   } from "react-router-dom";
+import Error404 from '../screens/Error404';
 
 export const RouterDom = () => {
   return (
@@ -21,6 +22,7 @@ export const RouterDom = () => {
       <Route path="/popularMovies/:search" element={<PopularMovies/>}></Route>
       <Route path="/seeMore" element={<SeeMore data={true}/>}></Route>
       <Route path="/movieDetails/:id" element={<MoviesDetail/>}></Route>
+      <Route path="*" element={<Error404/>}></Route>
     </Routes>
     </>
   )

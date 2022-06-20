@@ -18,8 +18,9 @@ const Hero = () => {
   return (
     <section className='hero'>
       <div className='hero_text'>
-        <h1>Your favorite movies. Explained.</h1>
-        <h3>Figure out what happend. Then find out why.</h3>
+        
+        <h1>Tus películas favoritas. Búscalas aquí.</h1>
+        <h3>Encuentra información y descubre nuevas películas</h3>
         </div>
         <div>
         <form onSubmit={handleSubmit}>
